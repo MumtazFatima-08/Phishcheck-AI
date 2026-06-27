@@ -1,123 +1,50 @@
-# PhishCheck AI
+# 🛡️ PhishCheck AI
 
-PhishCheck AI is a modern cybersecurity web application that helps users analyze URLs and detect possible phishing threats. It combines a polished UI, real-time threat scoring, and practical security recommendations in a single portfolio-ready project.
+**PhishCheck AI** is a modern phishing URL detection platform that helps users identify potentially malicious websites using intelligent rule-based analysis. Built with **React**, **Flask**, and **SQLite**, it delivers real-time threat assessment, detailed security insights, and a professional cybersecurity dashboard.
 
-## Why this project?
+---
 
-PhishCheck AI is designed for students and developers who want to showcase practical skills in:
-- Full-stack development
-- Cybersecurity awareness
-- REST API design
-- Database-driven apps
-- Modern UI/UX design
+## 🚀 Features
 
-## Features
+* 🔍 Real-time URL threat analysis
+* 📊 Threat score (0–100) with risk classification
+* 🛡️ Detection of common phishing indicators
 
-- Beautiful cyber-themed landing page with animated UI
-- URL scanning for phishing indicators
-- Threat score from 0 to 100
-- Risk categories: Safe, Low Risk, Medium Risk, High Risk, Critical
-- Clear security recommendations for each scan
-- Scan history stored in SQLite
-- Search, delete, and clear history actions
-- PDF report export
-- Responsive design for desktop and mobile
+  * Missing HTTPS
+  * Suspicious keywords
+  * IP-based URLs
+  * Excessive hyphens
+  * Numeric patterns
+  * Long URLs
+* 💡 Actionable security recommendations
+* 📜 Persistent scan history with SQLite
+* 🔎 Search, delete, and clear scan history
+* 📄 Export security reports as PDF
+* 🎨 Modern responsive cybersecurity-inspired UI
 
-## Tech Stack
+---
 
-- Frontend: React, Vite, Tailwind CSS, Framer Motion, Lucide React
-- Backend: Python, Flask, Flask-CORS
-- Database: SQLite
-- Deployment: Vercel for frontend, Render for backend
+## 🛠️ Tech Stack
 
-## Project Structure
+**Frontend**
 
-```text
-backend/
-  app.py
-  requirements.txt
-  .env.example
+* React
+* Vite
+* Tailwind CSS
+* Framer Motion
+* Lucide React
 
-frontend/
-  index.html
-  package.json
-  vite.config.js
-  tailwind.config.js
-  postcss.config.js
-  src/
-    App.jsx
-    main.jsx
-    styles.css
-    components/
-    services/
-```
+**Backend**
 
-## Installation
+* Python
+* Flask
+* Flask-CORS
 
-### Backend
+**Database**
 
-```bash
-cd backend
-python -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-python app.py
-```
+* SQLite
 
-### Frontend
+**Deployment**
 
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Set the frontend environment variable:
-
-```env
-VITE_API_URL=http://127.0.0.1:5000
-```
-
-## How it works
-
-1. User pastes a URL into the scanner.
-2. The backend analyzes the URL for suspicious indicators.
-3. The app returns a threat score, risk category, and recommendation.
-4. The scan is saved into SQLite history for review.
-
-## Deployment
-
-### Frontend (Vercel)
-
-1. Import the project into Vercel.
-2. Set the project root to the frontend folder.
-3. Use build command: `npm run build`
-4. Use output directory: `dist`
-5. Add environment variable: `VITE_API_URL=https://your-backend-url.onrender.com`
-
-### Backend (Render)
-
-1. Create a new Web Service in Render.
-2. Connect the GitHub repository.
-3. Set the root directory to backend.
-4. Use build command: `pip install -r requirements.txt`
-5. Use start command: `python app.py`
-6. Add environment variables from the backend `.env.example` file.
-
-## Screenshots
-
-- Hero section with cyber-themed visuals
-- URL scanner with threat analysis
-- Risk dashboard and scan history
-- PDF export-ready report view
-
-## Future Improvements
-
-- Live threat intelligence API integration
-- User authentication and dashboards
-- ML-based phishing classification
-- Email and attachment analysis support
-
-## License
-
-MIT
+* Vercel (Frontend)
+* Render (Backend)
