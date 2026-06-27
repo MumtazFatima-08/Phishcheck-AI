@@ -1,0 +1,10 @@
+node_modules/
+dist/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+.env
+backend/phishcheck.db
+frontend/package-lock.json

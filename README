@@ -1,0 +1,112 @@
+# PhishCheck AI
+
+PhishCheck AI is a modern, deployment-ready web application that evaluates URLs for phishing indicators and produces a threat score, risk category, and remediation guidance. The experience is designed to feel like a premium cybersecurity SaaS platform for internships, portfolios, and product demos.
+
+## Features
+
+- Beautiful cyber-themed landing experience with glassmorphism and animated UI
+- Real URL scanning engine for phishing indicators
+- Threat scoring from 0 to 100 with risk categories: Safe, Low Risk, Medium Risk, High Risk, Critical
+- Human-readable recommendations for each scan
+- SQLite-backed scan history with search, deletion, and clear actions
+- PDF export for security reports
+- Responsive layout for desktop and mobile devices
+
+## Screenshots
+
+- Hero section with animated threat intelligence visuals
+- URL scanner with live risk assessment
+- Dashboard showing threat overview and history
+- Scan history panel with export and cleanup actions
+
+## Architecture
+
+```text
+Frontend (React + Vite + Tailwind)
+  └── REST client calls to Flask backend
+
+Backend (Flask)
+  └── URL analysis service + SQLite persistence + export endpoint
+```
+
+## Folder Structure
+
+```text
+backend/
+  app.py
+  requirements.txt
+  .env.example
+  phishcheck.db
+frontend/
+  index.html
+  package.json
+  vite.config.js
+  tailwind.config.js
+  postcss.config.js
+  src/
+    App.jsx
+    main.jsx
+    styles.css
+    components/
+    services/
+```
+
+## Tech Stack
+
+- Frontend: React, Vite, Tailwind CSS, Framer Motion, Lucide React
+- Backend: Python, Flask, Flask-CORS
+- Database: SQLite
+- Deployment: Vercel for frontend, Render for backend
+
+## Installation
+
+### Backend
+
+```bash
+cd backend
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python app.py
+```
+
+### Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Set the frontend environment variable:
+
+```env
+VITE_API_URL=http://127.0.0.1:5000
+```
+
+## Deployment
+
+### Frontend (Vercel)
+
+1. Connect the frontend folder to Vercel.
+2. Set the build command to `npm run build`.
+3. Set the output directory to `dist`.
+4. Add the API base URL as an environment variable.
+
+### Backend (Render)
+
+1. Create a new Render web service from the backend folder.
+2. Set the build command to `pip install -r requirements.txt`.
+3. Set the start command to `python app.py`.
+4. Configure the environment variables from the backend `.env.example` file.
+
+## Future Improvements
+
+- Integrate live threat intelligence feeds and domain reputation APIs
+- Add user authentication and team workspaces
+- Provide machine learning-based phishing probability models
+- Add email and attachment analysis modules
+
+## License
+
+MIT
